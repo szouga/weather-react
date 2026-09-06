@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="App logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -25,7 +25,11 @@ function App() {
           <em>
             This project is deployed on the
             <br />
-            <a href="https://shecodes-szouga-weather-react-app.netlify.app/">
+            <a
+              href="https://shecodes-szouga-weather-react-app.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Netlify
             </a>{" "}
             App

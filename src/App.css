@@ -9,7 +9,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    /* animation: App-logo-spin infinite 20s linear; */
+    animation: App-logo-spin infinite 5s ease-in-out;
   }
 }
 
@@ -29,10 +30,16 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  0% {
+    /* Starts at 0 degrees, normal size */
+    transform: rotate(0deg) scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    /* Halfway: spun to 180 degrees, shrunk down to 60% size */
+    transform: rotate(180deg) scale(0.6);
+  }
+  100% {
+    /* Ends at 360 degrees, grows slightly past normal size for a nice bounce loop */
+    transform: rotate(360deg) scale(1.1);
   }
 }
