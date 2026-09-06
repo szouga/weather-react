@@ -40,6 +40,6 @@
   }
   100% {
     /* Ends at 360 degrees, grows slightly past normal size for a nice bounce loop */
-    transform: rotate(360deg) scale(1.1);
+    transform: rotate(360deg) scale(1);
   }
 }
