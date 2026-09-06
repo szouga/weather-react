@@ -24,6 +24,7 @@ function App() {
         <small>
           <em>
             This project is deployed on the
+            <br />
             <a href="https://shecodes-szouga-weather-react-app.netlify.app/">
               Netlify
             </a>{" "}
