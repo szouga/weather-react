@@ -20,6 +20,17 @@ function App() {
         </a>
         <Weather location={"Paris"} />
       </header>
+      <footer>
+        <small>
+          <em>
+            This project is deployed on the
+            <a href="https://shecodes-szouga-weather-react-app.netlify.app/">
+              Netlify
+            </a>{" "}
+            App
+          </em>
+        </small>
+      </footer>
     </div>
   );
 }
