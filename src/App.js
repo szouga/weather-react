@@ -32,7 +32,14 @@ function App() {
             >
               Netlify
             </a>{" "}
-            App
+            App and available on{" "}
+            <a
+              href="https://github.com/szouga/weather-react"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
           </em>
         </small>
       </footer>
