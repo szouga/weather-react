@@ -4,23 +4,25 @@ import React, { useState } from "react";
 // import "./Weather.css";
 // import sheCodesLogo from "./shecodes_logo.png";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
+  // const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
-  const [temperature, setTemperature] = useState(null);
+  // const [temperature, setTemperature] = useState(null);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
-      temperature: response.data.main.temp,
-      humidity: response.data.main.humidity,
-      date: "Wednesday 07:00",
-      description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      temperature: response.data.temperature.current,
+      humidity: response.data.temperature.humidity,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.condition.description,
+      // iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      iconUrl: response.data.condition.icon_url,
       wind: response.data.wind.speed,
-      city: response.data.name,
+      city: response.data.city,
     });
   }
 
@@ -48,7 +50,9 @@ export default function Weather(props) {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>
+            <FormattedDate date={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
