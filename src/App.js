@@ -21,7 +21,12 @@ export default function App() {
                 >
                   Netlify App
                 </a>
-                and available on
+                and deployed on{" "}
+                <a href="https://shecodes-weather-react-app-szouga.vercel.app/">
+                  Vercel
+                </a>
+                <br />
+                Available on
                 <a
                   href="https://github.com/szouga/weather-react"
                   target="_blank"
