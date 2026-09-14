@@ -9,6 +9,29 @@ export default function App() {
           <div className="container">
             <Weather defaultCity="New York" />
           </div>
+          <footer className="text-center">
+            <small>
+              <em>
+                This project is deployed on the
+                <br />
+                <a
+                  href="https://shecodes-szouga-weather-react-app.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Netlify App
+                </a>
+                and available on
+                <a
+                  href="https://github.com/szouga/weather-react"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              </em>
+            </small>
+          </footer>
         </div>
       </div>
     </div>

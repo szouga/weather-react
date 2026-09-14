@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 // import WeatherForecast from "./WeatherForecast";
-// import "./Weather.css";
+import "./Weather.css";
 // import sheCodesLogo from "./shecodes_logo.png";
 import axios from "axios";
 import "./Weather.css";
@@ -17,10 +17,11 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
-      date: new Date(response.data.dt * 1000),
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       // iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
-      iconUrl: response.data.condition.icon_url,
+      // iconUrl: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
       wind: response.data.wind.speed,
       city: response.data.city,
     });
