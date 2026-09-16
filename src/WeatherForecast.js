@@ -19,45 +19,17 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <WeatherForecastDay data={forecast[0]} />
-          </div>
-
-          <div className="col">
-            <div className="WeatherForecast-day">Thursday</div>
-            <WeatherIcon code="rain-night" size={36} />;
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">19°</span>
-              <span className="WeatherForecast-temperature-min">10°</span>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className="WeatherForecast-day">Thursday</div>
-            <WeatherIcon code="rain-night" size={36} />;
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">19°</span>
-              <span className="WeatherForecast-temperature-min">10°</span>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className="WeatherForecast-day">Thursday</div>
-            <WeatherIcon code="rain-night" size={36} />;
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">19°</span>
-              <span className="WeatherForecast-temperature-min">10°</span>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className="WeatherForecast-day">Thursday</div>
-            <WeatherIcon code="rain-night" size={36} />;
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">19°</span>
-              <span className="WeatherForecast-temperature-min">10°</span>
-            </div>
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
       </div>
     );
